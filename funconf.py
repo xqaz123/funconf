@@ -110,7 +110,7 @@ used as a decorator to a function too. Here is an example::
 """
 import functools
 from inspect import isfunction, ismethod 
-from collections import MutableMapping
+from collections.abc import MutableMapping
 try:
     from collections import OrderedDict 
 except ImportError:
@@ -118,9 +118,9 @@ except ImportError:
 import shlex
 from distutils.util import strtobool
 try:
-    from inspect import signature, Signature, Parameter
+    from inspect import signature, Parameter
 except ImportError:
-    from funcsigs import signature, Signature, Parameter 
+    from funcsigs import signature, Parameter 
 try:
     basestring = basestring
 except NameError:
